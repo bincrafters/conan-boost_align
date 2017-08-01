@@ -5,7 +5,7 @@ class BoostAlignConan(ConanFile):
     version = "1.64.0"
     generators = "txt"
     url = "https://github.com/boostorg/align"
-    description = "For a description of this library, please visit http://boost.org/align "
+    description = "Please visit http://www.boost.org/doc/libs/1_64_0/libs/libraries.htm"
     license = "www.boost.org/users/license.html"
     lib_short_name = "align"
     requires =  "Boost.Config/1.64.0@bincrafters/testing", \
@@ -19,5 +19,5 @@ class BoostAlignConan(ConanFile):
                  .format(self.version, self.url))
 
     def package(self):
-        include_dir = src=os.path.join(os.getcwd(), self.lib_short_name, "include")
+        include_dir = os.path.join(self.build_folder, self.lib_short_name, "include")
         self.copy(pattern="*", dst="", src=include_dir)
