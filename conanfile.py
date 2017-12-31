@@ -7,7 +7,7 @@ from conans import ConanFile, tools
 class BoostAlignConan(ConanFile):
     name = "boost_align"
     version = "1.66.0"
-    url = "https://github.com/bincrafters/conan-boost-align"
+    url = "https://github.com/bincrafters/conan-boost_align"
 
     lib_short_names = ["align"]
     is_header_only = True
